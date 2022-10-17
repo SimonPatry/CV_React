@@ -1,12 +1,6 @@
 .container {
-    padding: 5%;
+    text-align: center;
 }
-
-.header {
-    text-align: left;
-}
-
-/* Responsive */
 
 .mobile {
     text-align: center;
