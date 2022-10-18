@@ -5,7 +5,7 @@ import {
   Route, Link,
 } from "react-router-dom";
 import "./sideNav.css";
-import Home from "../Home/Home";
+import Home from "../Carousel/Carousel";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 import About from "../About/About";
@@ -61,7 +61,7 @@ const SideNav = () => {
                 
 
                 {/* Navigation */}
-                <div name="side-nav" className="side-nav" style={sideNavStyle}>
+                <div name="side-nav" className={`${screenSize}Side-nav side-nav`} style={sideNavStyle}>
                     {screenSize !== "desktop" && 
                         <a href="javascript:;" onClick={handleNavClick} 
                             className="close-nav"

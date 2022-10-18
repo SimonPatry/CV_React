@@ -1,0 +1,29 @@
+    /* Global */
+
+.container {
+    background-color: black;
+    color: white;
+}
+
+/* Content */
+
+.carousel{
+    width:100vw;
+    height: 100vh;
+}
+
+
+/* Responsive */
+
+.mobile {
+    text-align: center;
+}
+
+.tablet {
+    text-align: center;
+}
+
+.desktop {
+    text-align: left;
+}
+ 

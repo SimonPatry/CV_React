@@ -1,14 +1,10 @@
 import React, {useEffect, useState} from "react";
-import SideNav from './Components/navBar/SideNav'
 import './App.css';
-
+import Carousel from "./Components/Carousel/Carousel"
 function App() {
   return (
     <>
-      <SideNav />
-      <div className="globalContainer">
-        
-      </div>
+      < Carousel />
     </>
   );
 }
