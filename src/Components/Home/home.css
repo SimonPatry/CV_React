@@ -1,15 +1,50 @@
 .container {
     position: relative;
-    /* color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	animation: gradient 15s ease infinite; */
     background-clip: text;
     color: transparent;
 }
 
+/* color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite; */
+
+.bg-wrapper{
+    position: fixed;
+    top: 4.4vh;
+    left: 4.6vw;
+    width: 90.8vw;
+    height: 91.2vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bg-border{
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    background-color: rgb(51, 51, 51);
+    z-index: -1;
+}
+    
 .frame {
-    margin: 5%;
-    width: 80%;
-    height: 80%;
+    margin: 5vh 5vw;
+    width: 80vw;
+    height: 80vh;
     text-align: left;
-    padding: 5%;
+    padding: 5vh 5vw;
 }

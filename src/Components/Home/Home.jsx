@@ -38,6 +38,12 @@ const Home = () => {
 
     return (
         <div className="container">
+            { screenSize === "desktop" &&
+                <div>
+                    <div className="bg-wrapper"></div>
+                    <div className="bg-border"></div>
+                </div>
+            }
             <div className="frame">
                 <h1>Simon PATRY</h1>
                 <span>Je suis </span><WritingAnimation />
