@@ -53,6 +53,7 @@
 .alice-carousel__prev-btn:hover,
 .alice-carousel__next-btn:hover {
     background-color: rgba(34, 34, 34,0.5);
+    color: #23a6d5;
 }
 
 .alice-carousel__prev-btn{

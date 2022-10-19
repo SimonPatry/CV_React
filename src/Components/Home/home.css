@@ -41,10 +41,27 @@
     z-index: -1;
 }
     
-.frame {
+.content {
+    display:flex;
+    flex-wrap: wrap;
     margin: 5vh 5vw;
     width: 80vw;
-    height: 80vh;
     text-align: left;
     padding: 5vh 5vw;
+}
+
+.content h1 {
+    width: 100%;
+    font-size: 6vh;
+    margin:0;
+}
+
+.content span {
+    font-size: 4vh;
+    color: white;
+}
+
+.content p {
+    font-size: 1.5em;
+    color: white;
 }
