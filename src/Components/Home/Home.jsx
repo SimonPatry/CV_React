@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useMediaQuery } from 'react-responsive';
+import "./home.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
     // responsive
@@ -21,11 +23,11 @@ const Home = () => {
                     1000,
                     ''
                 ]}
-                wrapper={screenSize != "desktop" ? "div" : "no"}
+                wrapper= "div"
                 cursor={true}
                 repeat={Infinity}
                 style={{
-                    border: "2px solid black",
+                    color: "white",
                     width: screenSize === "mobile" ? "45%": "",
                     height: screenSize === "mobile" ? "15vh": "",
                 }}
@@ -35,32 +37,24 @@ const Home = () => {
 
 
     return (
-        <>
-            <header id="head" className="header">
+        <div className="container">
+            <div className="frame">
                 <h1>Simon PATRY</h1>
-                <h2>
-                    <span style={{color: "#0063BF"}}>Je suis </span><WritingAnimation />
-                </h2>
-                <hr></hr>
-            </header>
-            {/* <div className={`intro`}>
-                    <p>
-                        Hello ! bienvenue sur ce site dans lequel on parle.. et bien de moi !
-                    </p>
-                    <p>
-                        SI vous êtes ici, c'est que vous êtes curieux (cela nous fait déjà un point commun), aussi, laissez moi donc me présenter de manière brève.
-                    </p>
-                    <p>
-                        Simon, 27 ans, en formation de développeur Concepteur d'Applications, jusque la, rien de nouveau pour vous.. Cependant, il n'y a pas que cela ! Je vis sur Paris depuis maintenant 4 ans pendant lesquels je me suis former en tant que développeur. Tout d'abord en tant qu'architecte du numérique à l'école 42 pendant 2 ans, puis en tant que développeur/intégrateur puis développeur Fullstack avec la 3W Academy dans laquelle je me trouve encore aujourd'hui. 
-                    </p>
-                </div>
-                <div className={`${screenSize}Skills`}>
-                    <p>test</p>
-                </div>
-                <div className={`${screenSize}Projects`}>
-                    <p>test</p>
+                <span>Je suis </span><WritingAnimation />
+            </div>
+                {/* <div className={`intro`}>
+                <p>
+                    Hello ! bienvenue sur ce site dans lequel on parle.. et bien de moi !
+                </p>
+                <p>
+                    SI vous êtes ici, c'est que vous êtes curieux (cela nous fait déjà un point commun), aussi, laissez moi donc me présenter de manière brève.
+                </p>
+                <p>
+                    Simon, 27 ans, en formation de développeur Concepteur d'Applications, jusque la, rien de nouveau pour vous.. Cependant, il n'y a pas que cela ! Je vis sur Paris depuis maintenant 4 ans pendant lesquels je me suis former en tant que développeur. Tout d'abord en tant qu'architecte du numérique à l'école 42 pendant 2 ans, puis en tant que développeur/intégrateur puis développeur Fullstack avec la 3W Academy dans laquelle je me trouve encore aujourd'hui. 
+                </p>
                 </div> */}
-        </>
+            </div>
+        
     )
 }
 

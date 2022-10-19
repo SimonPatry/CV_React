@@ -1,3 +1,15 @@
-.header {
+.container {
+    position: relative;
+    /* color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite; */
+    background-clip: text;
+    color: transparent;
+}
+
+.frame {
+    margin: 5%;
+    width: 80%;
+    height: 80%;
     text-align: left;
+    padding: 5%;
 }
