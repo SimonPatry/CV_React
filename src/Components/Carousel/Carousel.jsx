@@ -36,11 +36,21 @@ const Carousel = () => {
                     <div className="carousel">
                         <AliceCarousel
                             renderPrevButton={() => {
-                                return <FontAwesomeIcon style={{color: "white", fontSize: "2vw", rotate: "180deg"}} icon={faArrowRightToBracket} />
+                                return <FontAwesomeIcon 
+                                    style={{
+                                        rotate: "180deg"
+                                    }} 
+                                    icon={faArrowRightToBracket} 
+                                    className="arrow"
+                                />
                             }}
                             renderNextButton={() => {
-                                return <FontAwesomeIcon style={{color:"white", fontSize: "2vw"}} icon={faArrowRightToBracket} />
+                                return <FontAwesomeIcon 
+                                    icon={faArrowRightToBracket}
+                                    className="arrow"
+                                />
                             }}
+                            
                             items={items}
                             disableDotsControls = {true}
                             disableSlideInfo = {true}
