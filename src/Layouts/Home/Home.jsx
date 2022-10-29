@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useMediaQuery } from 'react-responsive';
 import "./home.css"
-import Card from '@mui/material/Card';
+//import Card from '@mui/material/Card';
 
 const Home = () => {
     // responsive

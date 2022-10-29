@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { useMediaQuery } from 'react-responsive';
 import Skillbar from 'react-skillbars';
-import customCard from "../../Components/CustomCard/CustomCard";
+//import customCard from "../../Components/CustomCard/CustomCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
