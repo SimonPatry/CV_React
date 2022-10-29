@@ -8,14 +8,14 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { Card } from "@mui/material";
+/import { Card } from "@mui/material";
 
 import "./about.css";
 
 const About = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
     const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
-    let screenSize = isMobile ? "mobile" : isTablet ? "tablet" : "desktop";
+    //let screenSize = isMobile ? "mobile" : isTablet ? "tablet" : "desktop";
 
     const skills = [
         {type: "React", level: 75},
@@ -44,7 +44,7 @@ const About = () => {
                             <li><FontAwesomeIcon icon={faUser} /> Simon PATRY</li>
                             <li><FontAwesomeIcon icon={faPhone} /> 06 65 72 43 16</li>
                             <li><FontAwesomeIcon icon={faPaperPlane} /> simonpatry12@gmail.com</li>
-                            <li><a href="https://github.com/SimonPatry" target="_blank"><FontAwesomeIcon icon={faCode} /> https://github.com/SimonPatry</a></li>
+                            <li><a href="https://github.com/SimonPatry" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faCode} /> https://github.com/SimonPatry</a></li>
                         </ul>
                     <a id="cvBtn" href="/assets/CV_Simon_PATRY.pdf" download><FontAwesomeIcon icon={faDownload} />CV</a>
                 </div>

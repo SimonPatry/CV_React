@@ -19,7 +19,7 @@ const Home = () => {
                     1000,
                     'Développeur',
                     1000,
-                    `Concepteur Développeur d\'Applications`,
+                    `Concepteur Développeur d'Applications`,
                     1000,
                     ''
                 ]}
