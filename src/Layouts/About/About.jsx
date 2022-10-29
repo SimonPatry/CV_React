@@ -13,8 +13,8 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import "./about.css";
 
 const About = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
-    const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
+    // const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
+    // const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
     //let screenSize = isMobile ? "mobile" : isTablet ? "tablet" : "desktop";
 
     const skills = [
