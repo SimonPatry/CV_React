@@ -1,0 +1,139 @@
+    /* Global */
+
+.container {
+	background: linear-gradient(-45deg, #022E51, #A3B4C8, #CC6D3D, #B75803);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    width:100vw;
+    height: 100vh;
+
+}
+
+/* desktop global */
+
+P {
+    color: white;
+}
+
+.desktop h1 {
+    width: 100%;
+    font-size: 4vh;
+    margin:0;
+}
+
+.desktop span,
+.desktop h2 {
+    font-size: 2.5vh;
+}
+
+.desktop hr {
+    width: 50%;
+}
+
+.desktop p {
+    font-size: 2vh;
+}
+
+/* Tablet */ 
+
+.tablet span,
+.tablet h2 {
+    font-size: 2vh;
+}
+
+/* mobile */
+
+.mobile h1 {
+    width: 100%;
+    font-size: 9vw;
+    margin:0;
+}
+
+.mobile span,
+.mobile h2 {
+    font-size: 7vw;
+}
+
+.mobile hr {
+    width: 50%;
+}
+
+.mobile p {
+    color: white;
+    font-size: 1v;
+}
+
+/* */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Carousel */
+
+.carousel{
+    width:100vw;
+    height: 100vh;
+}
+
+
+.alice-carousel__wrapper {
+    background: rgb(51, 51, 51);
+    height: 100vh;
+    position: relative;
+}
+
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+    background-color:  rgba(51, 51, 51,0);
+    position: fixed;
+    top:0;
+    padding: 0.5vw;
+    width: 3vw;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    line-height: 100vh;
+}
+
+.alice-carousel__prev-btn:hover,
+.alice-carousel__next-btn:hover {
+    background-color: rgba(34, 34, 34,0.5);
+    color: #B75803;
+}
+.arrow{
+    font-size: 2vw;
+}
+
+.alice-carousel__prev-btn{
+    left: 0;
+    text-align:center;
+}
+
+.alice-carousel__next-btn{
+    right: 0;
+}
+
+/* Responsive */
+
+.mobile {
+    text-align: center;
+}
+
+.tablet {
+    text-align: center;
+}
+
+.desktop {
+    text-align: left;
+}
+ 

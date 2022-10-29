@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import './App.css';
-import Carousel from "./Components/Carousel/Carousel"
+import Carousel from "./Layouts/Carousel/Carousel"
 function App() {
   return (
     <>
