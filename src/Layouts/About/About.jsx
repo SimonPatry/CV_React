@@ -8,7 +8,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-/import { Card } from "@mui/material";
+//import { Card } from "@mui/material";
 
 import "./about.css";
 
