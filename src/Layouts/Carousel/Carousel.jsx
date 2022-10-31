@@ -3,8 +3,6 @@ import { useMediaQuery } from 'react-responsive';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "./carousel.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 
 // import others pages
 import Contact from "../Contact/Contact";
@@ -36,19 +34,14 @@ const Carousel = () => {
                     <div className="carousel">
                         <AliceCarousel
                             renderPrevButton={() => {
-                                return <FontAwesomeIcon 
-                                    style={{
-                                        rotate: "180deg"
-                                    }} 
-                                    icon={faArrowRightToBracket} 
+                                return <div
                                     className="arrow"
-                                />
+                                ></div>
                             }}
                             renderNextButton={() => {
-                                return <FontAwesomeIcon 
-                                    icon={faArrowRightToBracket}
+                                return <div
                                     className="arrow"
-                                />
+                                ></div>
                             }}
                             activeIndex={1}
                             items={items}

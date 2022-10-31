@@ -1,0 +1,10 @@
+{ "portfolio": {
+    "description": "Ce portfolio est le projet de validation de ma formation de développpeur intégrateur web. Il répond donc à une série de contraintes: structyure mvc, langages web natifs, un back offfice, une base de donnée SQL",
+    "stack": "",
+    "assets" : [
+        "/assets/projects/portfolio/img1.png",
+        "/assets/projects/portfolio/img2.png",
+        "/assets/projects/portfolio/img3.png"
+    ]
+    }
+}
