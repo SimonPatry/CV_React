@@ -18,13 +18,13 @@ const About = () => {
     //let screenSize = isMobile ? "mobile" : isTablet ? "tablet" : "desktop";
 
     const skills = [
-        {type: "React", level: 75},
+        {type: "React", level: 70},
         {type: "Node", level: 80},
+        {type: "MySQL", level: 60},
+        {type: "PHP", level: 40},
         {type: "Js", level: 95},
         {type: "HTML", level: 95},
         {type: "CSS", level: 95},
-        {type: "MySQL", level: 70},
-        {type: "PHP", level: 60},
     ];
 
     const colors = {
@@ -50,15 +50,13 @@ const About = () => {
                 </div>
                 <div className="introduction">
                     <h1>MON PARCOURS</h1>
-                    <p>J'ai tout d'abord commencer mon chemin  de développeur en tant qu'architecte du numérique à l'école 42 pendant en 2018, puis en tant que développeur/intégrateur en mars 2021 puis développeur Fullstack octobre 2021 avec la 3W Academy dans laquelle je me trouve encore aujourd'hui pour ma formation de concepteur développeur d'applications.</p>
+                    <p>J'ai commencer mon chemin  de développeur en tant qu'architecte du numérique à l'école 42 pendant en 2018, puis en tant que développeur/intégrateur en mars 2021 puis développeur Fullstack octobre 2021 avec la 3W Academy dans laquelle je me trouve encore aujourd'hui pour ma formation de concepteur développeur d'applications.</p>
                 </div>
                 <div className="skills">
                     <h1>SKILLS</h1>
-                    {/* <customCard
-                        title="MES COMPETENCES"
-                        content={<Skillbar skills={skills} colors={colors} height={'5vh'}/>}
-                    /> */}
-                    <Skillbar   id="skills" skills={skills} colors={colors} height={'3vh'} />
+                    <div className="skillBar">
+                        <Skillbar skills={skills} colors={colors} height={'3vh'} />
+                    </div>
                 </div>
                 <div className="interests">
                 <div className="aboutWheelCenter">
