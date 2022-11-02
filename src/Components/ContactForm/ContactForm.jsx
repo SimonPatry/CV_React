@@ -1,10 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import '../../Layouts/Contact/Contact.css'
+import '../../Layouts/Contact/contact.css'
 
+const {
+  REACT_APP_SERVICE_ID,
+  REACT_APP_TEMPLATE_ID,
+  REACT_APP_USER_ID
+} = process.env
 
 const ContactForm = () => {
   const {
@@ -15,7 +20,7 @@ const ContactForm = () => {
   } = useForm();
   
   // Function that displays a success toast on bottom right of the page when form submission is successful
-
+  
   const toastifySuccess = () => {
     toast('Form sent!', {
       position: 'bottom-right',
@@ -40,12 +45,12 @@ const ContactForm = () => {
         subject,
         message
       };
-
+      
       await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_USER_ID
+        REACT_APP_USER_ID
       );
 
       reset();
@@ -55,18 +60,22 @@ const ContactForm = () => {
     }
   };
 
+  console.log(process.env);
+
+  console.log(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID)
+
   return (
     <div className='ContactForm'>
 
       {/* name */}
       <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="name">
-          <input type='text' name='name' placeholder='Name'
+          <input type='text' name='name' placeholder='Nom'
             {...register('name', {
-              required: { value: true, message: 'Please enter your name' },
+              required: { value: true, message: 'Entrez un Nom' },
               maxLength: {
                 value: 30,
-                message: 'Please use 30 characters or less'
+                message: 'Taille maximum: 30'
               }})
             }
           ></input>
@@ -75,26 +84,26 @@ const ContactForm = () => {
 
         {/* mail */}
         <div className="email">
-          <input type='email' name='email' placeholder='Email address'
+          <input type='email' name='email' placeholder='Email'
             {...register('email', {
               required: true,
               pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
             })}
           ></input>
           {errors.email && (
-            <span className='errorMessage'>Please enter a valid email address</span>
+            <span className='errorMessage'>Adresse mail non valide</span>
           )}
         </div>
 
         {/* subject */}
         <div className="subject">
           <input
-            type='text' name='subject' placeholder='Subject'
+            type='text' name='subject' placeholder='Sujet'
             {...register('subject', {
-              required: { value: true, message: 'Please enter a subject' },
+              required: { value: true, message: 'Entrez un Sujet' },
               maxLength: {
                 value: 75,
-                message: 'Subject cannot exceed 75 characters'
+                message: 'Taille maximum: 75'
               }
             })}
           ></input>
@@ -110,11 +119,11 @@ const ContactForm = () => {
                 required: true
               })}
             ></textarea>
-            {errors.message && <span className='errorMessage'>Please enter a message</span>}
+            {errors.message && <span className='errorMessage'>Message vide</span>}
           </div>
         
         {/* submit */}
-        <button className='submit-btn' type='submit'>Submit</button>
+        <button className='submit' type='submit'>Envoyer</button>
       </form>
       <ToastContainer />
     </div>

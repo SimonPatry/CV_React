@@ -1,5 +1,50 @@
 /* Contact form */
 
+    /* form design */
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color:white;
+}
+
+form div {
+    margin: 1vw;
+    font-size: 2vh;
+}
+
+    /* input design */
+form div input,
+form div textarea {
+    margin-left: 30vw;
+    width: 40vw;
+    padding: 1.5vh;
+    color:white;
+    background-color: rgba(31,31,31,0.5);
+}
+
+    /* input erros */
+
+.name, .subject, .message, .email {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.errorMessage{
+    width: 100vw;
+    text-align: center;
+    color:red;
+}
+
+    /* submit */
+
+form .submit {
+    width: 20vw;
+    margin-left: 40vw;
+}
+
 
 /* Responsive */
 

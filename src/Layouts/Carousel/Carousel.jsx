@@ -43,7 +43,7 @@ const Carousel = () => {
                                     className="arrow"
                                 ></div>
                             }}
-                            activeIndex={1}
+                            activeIndex={3}
                             items={items}
                             disableDotsControls = {true}
                             disableSlideInfo = {true}
