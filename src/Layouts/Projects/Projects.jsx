@@ -54,7 +54,7 @@ const Projects = () => {
                             <p>{project.name}</p>
                             <p style={{fontStyle: "italic"}} >{project.date}</p>
                             <p>{project.description}</p>
-                            <a style={{textDecoration: "none", color: "white"}} >{project.link}</a>
+                            <a style={{textDecoration: "none", color: "white"}} href={project.link}>{project.link}</a>
                             <embed type="video/webm" src={project.video} width="400" height="300" />
                         </div>
                     )
