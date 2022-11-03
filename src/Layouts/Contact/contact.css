@@ -41,8 +41,8 @@ form div textarea {
     /* submit */
 
 form .submit {
-    width: 20vw;
-    margin-left: 40vw;
+    width: 10%;
+    margin-left: 45%;
 }
 
 
@@ -59,3 +59,4 @@ form .submit {
 .desktop {
     text-align: center;
 }
+

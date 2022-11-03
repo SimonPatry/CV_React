@@ -3,13 +3,7 @@ import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import '../../Layouts/Contact/contact.css'
-
-const {
-  REACT_APP_SERVICE_ID,
-  REACT_APP_TEMPLATE_ID,
-  REACT_APP_USER_ID
-} = process.env
+import '../../Layouts/Contact/contact.css';
 
 const ContactForm = () => {
   const {
@@ -19,6 +13,12 @@ const ContactForm = () => {
     formState: { errors }
   } = useForm();
   
+  const {
+    REACT_APP_SERVICE_ID,
+    REACT_APP_TEMPLATE_ID,
+    REACT_APP_USER_ID
+  } = process.env
+
   // Function that displays a success toast on bottom right of the page when form submission is successful
   
   const toastifySuccess = () => {
