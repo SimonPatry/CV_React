@@ -48,6 +48,7 @@ const Projects = () => {
         <div className={`${screenSize} container`}>
             <div className="projects">
                 <h1>Mes projets</h1>
+                <p>Page en cours de création...</p>
                 {projects.map((project) => {
                     return (
                         <div className="project-block">
