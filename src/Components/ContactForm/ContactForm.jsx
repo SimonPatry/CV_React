@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useRef} from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import '../../Layouts/Contact/contact.css';
+import reCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
   const {
@@ -34,8 +35,13 @@ const ContactForm = () => {
     });
   };
   
+  
   // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
+
+    //const token = captchaRef.current.getValue();
+    captchaRef.current.reset();
+
     // Destrcture data object
     const { name, email, subject, message } = data;
     try {
@@ -60,9 +66,8 @@ const ContactForm = () => {
     }
   };
 
-  console.log(process.env);
-
-  console.log(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID)
+  const captchaRef = useRef(null)
+  //const token = captchaRef.current.getValue();
 
   return (
     <div className='ContactForm'>
@@ -122,12 +127,19 @@ const ContactForm = () => {
             {errors.message && <span className='errorMessage'>Message vide</span>}
           </div>
         
+          <reCAPTCHA 
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                ref={captchaRef}
+            />
+
         {/* submit */}
+
         <button className='submit' type='submit'>Envoyer</button>
       </form>
       <ToastContainer />
     </div>
   );
 };
+
 
 export default ContactForm;

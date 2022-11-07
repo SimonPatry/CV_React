@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { useMediaQuery } from 'react-responsive';
 import "./projects.css";
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const Projects = () => {
     
@@ -21,6 +22,8 @@ const Projects = () => {
             link: "https://simonpatry.fr",
             video: "",
             date: "07/21",
+            style: "project-hover project-hover-effect",
+            styleEffect: false,
         },
         {
             name: "VignUp",
@@ -31,6 +34,8 @@ const Projects = () => {
             link: "",
             video: "",
             date: "05/22",
+            style: "project-hover project-hover-effect",
+            styleEffect: false,
         },
         {
             name: "Doom-nukem",
@@ -41,22 +46,57 @@ const Projects = () => {
             link: "",
             video: "",
             date: "08/2020",
+            style: "project-hover project-hover-effect",
+            styleEffect: false,
         }
     ];
+
+    const [port, setPort] = useState(false);
+    const [vign, setVign] = useState(false);
+    const [doom, setDoom] = useState(false);
+
+    
+    const handleKeyPress = (key) => {
+        if (key === 0){
+            port ? setPort(false): setPort(true);
+            port && setTimeout(() => {
+                setPort("hide");
+                console.log("hide");
+            }, 2000);
+        } else if (key === 1) {
+            vign ? setVign(false): setVign(true);
+        } else if (key ===2) {
+            doom ? setDoom(false): setDoom(true);
+        }
+    }
 
     return(
         <div className={`${screenSize} container`}>
             <div className="projects">
                 <h1>Mes projets</h1>
                 <p>Page en cours de création...</p>
-                {projects.map((project) => {
+                {projects.map((project, key) => {
                     return (
-                        <div className="project-block">
-                            <p>{project.name}</p>
-                            <p style={{fontStyle: "italic"}} >{project.date}</p>
-                            <p>{project.description}</p>
-                            <a style={{textDecoration: "none", color: "white"}} href={project.link}>{project.link}</a>
-                            <embed type="video/webm" src={project.video} width="400" height="300" />
+                        <div className="project">
+                            <div className={`project-hover ${key === 0 && port ? "project-hover-effect" : key === 1 && vign ? "project-hover-effect" : key === 2 && doom ? "project-hover-effect" : ""}`}
+                                onClick={(e) =>{
+                                    e.preventDefault();
+                                    handleKeyPress(key);
+                                }}
+                            >
+                                <p>{project.name}</p>
+                                {project.img.length > 0 && <img src={project.img} alt={project.name} />}
+                            </div>
+                            <div className="project-card" onClick={(e) => {
+                                
+                                project.styleEffect = false;
+                            }}>
+                                <p>{project.name}</p>
+                                <p style={{fonteffect: "italic"}} >{project.date}</p>
+                                <p>{project.description}</p>
+                                <a style={{textDecoration: "none", color: "white"}} href={project.link}>{project.link}</a>
+                                <embed type="video/webm" src={project.video} width="400" height="300" />
+                            </div>
                         </div>
                     )
                 })}
