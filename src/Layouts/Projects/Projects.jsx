@@ -57,12 +57,9 @@ const Projects = () => {
 
     
     const handleKeyPress = (key) => {
+        console.log(port, vign, doom);
         if (key === 0){
             port ? setPort(false): setPort(true);
-            port && setTimeout(() => {
-                setPort("hide");
-                console.log("hide");
-            }, 2000);
         } else if (key === 1) {
             vign ? setVign(false): setVign(true);
         } else if (key ===2) {
@@ -78,24 +75,27 @@ const Projects = () => {
                 {projects.map((project, key) => {
                     return (
                         <div className="project">
-                            <div className={`project-hover ${key === 0 && port ? "project-hover-effect" : key === 1 && vign ? "project-hover-effect" : key === 2 && doom ? "project-hover-effect" : ""}`}
-                                onClick={(e) =>{
-                                    e.preventDefault();
-                                    handleKeyPress(key);
-                                }}
-                            >
-                                <p>{project.name}</p>
-                                {project.img.length > 0 && <img src={project.img} alt={project.name} />}
-                            </div>
-                            <div className="project-card" onClick={(e) => {
+                            { ((key === 0 && !port) || (key === 1 && !vign) || (key === 2 && !doom)) && 
+                                <div className={`project-hover`}
+                                    onClick={(e) =>{
+                                        e.preventDefault();
+                                        handleKeyPress(key);
+                                    }}
+                                >
                                 
-                                project.styleEffect = false;
-                            }}>
+                                    <p>{project.name}</p>
+                                    {project.img.length > 0 && <img src={project.img} alt={project.name} />}
+                                </div>
+                            }
+                            <div className={`project-card ${project.name}`} onClick={(e) =>{
+                                        e.preventDefault();
+                                        handleKeyPress(key);
+                                    }}>
                                 <p>{project.name}</p>
                                 <p style={{fonteffect: "italic"}} >{project.date}</p>
                                 <p>{project.description}</p>
-                                <a style={{textDecoration: "none", color: "white"}} href={project.link}>{project.link}</a>
-                                <embed type="video/webm" src={project.video} width="400" height="300" />
+                                <a style={{textDecoration: "none", color: "white", zIndex:2}} href={project.link}>{project.link}</a>
+                                {(project.video && (port || vign || doom)) && <embed type="video/webm" src={project.video} width="400" height="300" />}
                             </div>
                         </div>
                     )
